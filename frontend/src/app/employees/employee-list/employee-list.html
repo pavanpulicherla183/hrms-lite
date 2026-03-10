@@ -1,0 +1,36 @@
+<h4 class="mb-3">Employee List</h4>
+
+<table class="table table-striped table-bordered">
+
+<thead class="table-dark">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Department</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr *ngIf="employees.length === 0">
+<td colspan="5" class="text-center">No employees found</td>
+</tr>
+
+<tr *ngFor="let emp of employees">
+<td>{{emp.employee_id}}</td>
+<td>{{emp.full_name}}</td>
+<td>{{emp.email}}</td>
+<td>{{emp.department}}</td>
+<td>
+<button class="btn btn-danger btn-sm"
+(click)="deleteEmployee(emp.id)">
+Delete
+</button>
+</td>
+</tr>
+
+</tbody>
+
+</table>
