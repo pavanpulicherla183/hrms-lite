@@ -7,7 +7,7 @@ import { Observable, Subject } from 'rxjs';
 })
 export class ApiService {
 
-  private baseUrl = 'https://hrms-backend-xnfu.onrender.com/api';
+  private baseUrl = 'https://hrms-backend-xnfu.onrender.com/api/';
 
   // event to notify employee list update
   employeeUpdated = new Subject<void>();
