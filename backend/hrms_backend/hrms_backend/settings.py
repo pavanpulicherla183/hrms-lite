@@ -124,3 +124,7 @@ STATIC_URL = 'static/'
 
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "https://hrms-frontend-6lbw.onrender.com"
+]
