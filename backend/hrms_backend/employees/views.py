@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from rest_framework import viewsets
 from .models import Employee, Attendance
 from .serializers import EmployeeSerializer, AttendanceSerializer
@@ -11,3 +12,7 @@ class EmployeeViewSet(viewsets.ModelViewSet):
 class AttendanceViewSet(viewsets.ModelViewSet):
     queryset = Attendance.objects.all()
     serializer_class = AttendanceSerializer
+
+
+def health_check(request):
+    return HttpResponse("OK")
