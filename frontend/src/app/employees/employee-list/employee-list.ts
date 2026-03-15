@@ -1,13 +1,13 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { ApiService } from '../../services/api';
 
 @Component({
   selector: 'app-employee-list',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgIf],
   templateUrl: './employee-list.html',
-  styleUrl: './employee-list.css',
+  styleUrls: ['./employee-list.css'],
 })
 export class EmployeeList implements OnInit {
 
